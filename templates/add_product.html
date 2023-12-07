@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+{% block content %}
+
+
+<h1>Add product</h1>
+
+<br>
+<a href="{{url_for('index')}}">Home Page</a>
+<br><br><br>
+
+<div>
+    <form action="{{url_for('add_product')}}" method="POST" enctype="multipart/form-data">
+        {{ form.hidden_tag() }}
+        <p>
+            {{ form.name.label }}<br>
+            {{ form.name(size=32) }}
+        </p>
+        <p>
+            {{ form.price.label }}<br>
+            {{ form.price(size=32) }}
+        </p>
+        <div class="custom-input">
+            {{ form.pic(id="registerFile", class="custom-image-input") }}
+            <label for="registerFile" class="custom-image-label"><span
+                    class="material-icons-round">portrait</span>Upload profile picture...</label>
+            {% if form.pic.errors %}
+            <ul class="errors">
+                {% for error in form.pic.errors %}
+                <li style="color: var(--color-danger);">{{ error }}</li>
+                {% endfor %}
+            </ul>
+            {% endif %}
+        </div>
+
+        <p>
+            {{ form.body(class="ckeditor") }}
+        </p>
+
+        <p>{{ form.submit(class='form_btn') }}</p>
+    </form>
+    {{ ckeditor.config(name='body') }}
+</div>
+
+{% endblock %}

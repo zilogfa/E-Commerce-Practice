@@ -1,0 +1,254 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+:root{
+    --color-primary: #6C9BCF;
+    --color-danger: #FF0060;
+    --color-success: #1B9C85;
+    --color-warning: #F7D060;
+    --color-white: #fff;
+    --color-info-dark: #7d8da1;
+    --color-dark: #363949;
+    --color-light: rgba(132, 139, 200, 0.18);
+    --color-dark-variant: #677483;
+    --color-background: #f6f6f9;
+
+    --card-border-radius: 2rem;
+    --border-radius-1: 0.4rem;
+    --border-radius-2: 1.2rem;
+
+    --card-padding: 1.8rem;
+    --padding-1: 1.2rem;
+
+    --box-shadow: 0 2rem 3rem var(--color-light);
+    --text-shadow: 0rem 0.2rem 0.2rem var(--color-light);
+
+    --color-post: #5dbbff;
+    --color-post-hover: #0095ff;
+
+    --color-yellow-100: #ffefc0;
+    --color-yellow-200: #ffe69c;
+    --color-yellow-300: #ffd967;
+    --color-yellow-400: #fcc729;
+    --color-black: #000000;
+}
+
+.dark-mode{
+    --color-background: #181a1e;
+    --color-white: #202528;
+    --color-dark: #edeffd;
+    --color-dark-variant: #a3bdcc;
+    --color-light: rgba(0, 0, 0, 0.4);
+    --box-shadow: 0 2rem 3rem var(--color-light);
+    
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    appearance: 0;
+    /* border: 0; */
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 14px;
+}
+
+body{
+    width: 100vw;
+    height: 100vh;
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.88rem;
+    user-select: none;
+    overflow-x: hidden;
+    color: var(--color-dark);
+    background-color: var(--color-background);
+}
+
+a{
+    color: var(--color-dark);
+}
+
+img{
+    display: block;
+    width: 100%;
+    object-fit: cover;
+}
+
+h1{
+    font-weight: 800;
+    font-size: 1.8rem;
+}
+
+h2{
+    font-weight: 600;
+    font-size: 1.4rem;
+}
+
+h3{
+    font-weight: 500;
+    font-size: 0.87rem;
+}
+
+small{
+    font-size: 0.76rem;
+}
+
+p{
+    color: var(--color-dark-variant);
+}
+
+b{
+    color: var(--color-dark);
+}
+
+strong{
+    color: var(--color-dark);
+}
+
+.text-muted{
+    color: var(--color-info-dark);
+}
+
+.primary{
+    color: var(--color-primary);
+}
+
+.danger{
+    color: var(--color-danger);
+}
+
+.success{
+    color: var(--color-success);
+}
+
+.warning{
+    color: var(--color-warning);
+}
+
+.container{
+    display: grid;
+    width: 96%;
+    margin: 0 auto;
+    gap: 1rem;
+    grid-template-columns: 16rem 46rem 23rem;
+    justify-content: center;
+}
+
+/* .container{
+    display: grid;
+    width: 96%;
+    margin: 0 auto;
+    gap: 1.8rem;
+    grid-template-columns: 12rem auto 23rem;
+} */
+
+
+
+
+
+
+
+
+
+.form_btn {
+    background-color: var(--color-dark);
+    height: 2.5rem;
+    min-width: 10rem;
+    color: var(--color-white);
+    font-weight: bold;
+    border-radius: var(--border-radius-1);
+    transition: var(--transition-1);
+}
+
+.form_btn:hover {
+    background-color: var(--color-dark-variant);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* -- Like Class ♥ */
+.heart-emoji {
+    font-size: 24px;
+    transition: all 0.6s ease;
+    animation: heart-nohover 0.1s forwards ease-out;
+}
+
+@keyframes heart-nohover {
+    0% {
+        transform: scale(1);
+    }
+
+    70% {
+        transform: scale(0.9);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+
+.red-heart {
+    color: var(--color-danger);
+    transition: all 0.6s ease;
+    animation: heart-hover 0.1s forwards ease-out;
+}
+
+@keyframes heart-hover {
+    0% {
+        transform: scale(1);
+    }
+
+    20% {
+        transform: scale(0.8);
+    }
+
+    70% {
+        transform: scale(1.2);
+        filter: blur(2px);
+    }
+
+    100% {
+        transform: scale(1);
+        filter: blur(0px);
+    }
+}
+
+.empty-heart {
+    color:var(--color-info-dark);
+    transition: all 0.6s ease
+}
+
+
+
+/* -- End of Like Class ♥ */
+
+
+
+
+
+
+
+

@@ -1,0 +1,325 @@
+
+
+header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 100vw;
+    height: 46rem;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--color-black);
+}
+
+
+header img{
+    position: absolute;
+    width: 100vw;
+    height: 46rem;  
+    opacity: 0.8;  
+}
+
+header .title{
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 12rem 0;
+    color: var(--color-black);
+    z-index: +1;
+    color: var(--color-white);
+    padding: 0.5rem;
+}
+
+header .title h1{
+    font-size: 5.8rem;
+    font-family:'Times New Roman', Times, serif;
+    text-shadow: var(--text-shadow);
+}
+
+header .title h3{
+    text-shadow: var(--text-shadow);
+}
+
+.product-sec{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    margin-top: 4rem;
+}
+
+.product-sec h1{
+    font-size: 2.8rem;
+    font-family:'Times New Roman', Times, serif;
+}
+
+.product-sec button{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    padding: 0.4rem 1rem;
+    background-color: var(--color-yellow-400);
+    border: 0;
+    border-radius: var(--border-radius-1);
+    transition: all 0.2s ease;
+    color: var(--color-white);
+}
+
+.product-sec button:hover{
+    color: var(--color-yellow-400);
+    background-color: var(--color-yellow-100);
+}
+
+.product-sec button:active{
+    color: var(--color-white);
+    background-color: var(--color-success);
+}
+
+
+.products{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin: 2rem 0;
+    
+}
+
+.products .product{
+    display: flex;
+    flex-direction: column;
+    width: 24rem;
+    min-height: 36rem;
+    gap: 1rem;
+    justify-content:flex-start;
+    border-radius: var(--border-radius-1);
+    background-color: var(--color-white);
+    box-shadow: var(--box-shadow);
+    transition: all 0.3s ease;
+    border: 1px solid var(--color-light);
+}
+
+.products .product:hover{
+    box-shadow: none;
+}
+
+
+.products .product-img {
+}
+
+.products .product-img img{
+    border-radius: 0.4rem 0.4rem 0 0;
+}
+
+.products .product .product-title{
+    display: flex;
+    gap: 1rem;
+    flex-direction: column;
+    padding: 0.2rem 1rem;
+
+}
+
+.products .product .product-title a:hover{
+    opacity: 0.4;
+}
+
+
+.products .product h3{
+    font-size: 1.2rem;
+}
+
+.products .product p{
+    font-size: 1.8rem;
+    color: var(--color-dark);
+    opacity: 0.5;
+    font-family:'Times New Roman', Times, serif;
+}
+
+
+
+
+
+section{
+    width: 100vw;
+    min-height: 4rem;
+
+    margin: 2rem 0;
+
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+}
+
+section div{
+    display: flex;
+    flex-direction: column;
+    padding: 3rem 0;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+
+
+
+
+
+
+footer{
+    width: 100vw;
+    background-color: var(--color-black);
+    min-height: 20rem;
+    margin-top: 8rem;
+
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+}
+
+footer div{
+    display: flex;
+    flex-direction: column;
+    padding: 3rem 0;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+ul li{
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: left;
+}
+
+
+
+.product-sec .back-home{
+    display: flex;
+    flex-direction: row;
+    gap: 1.8;
+    justify-content: center;
+    align-items: center;
+    padding: 0.4rem 1.5rem;
+    border-radius: 100px;
+    background-color: var(--color-white);
+    color: var(--color-dark);
+    transition: all 0.3s ease;
+}
+
+.back-home h3{
+    font-size: 1.6rem;
+}
+
+.back-home:hover{
+    gap: 2rem;
+    transition:all 0.3s ease ;
+}
+
+
+
+
+.tab{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 1rem;
+    gap: 4rem;
+    background-color: var(--color-white);
+    padding: 2rem;
+    box-shadow: var(--box-shadow);
+    
+}
+
+.tab h3{
+    font-weight: bold;
+}
+
+.tab div{
+    width: 24rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+}
+
+.tab img{
+    width: 22rem;
+    border: 1px solid var(--color-light);
+}
+
+
+
+
+
+
+
+
+/* Custome Image Input FileField */
+.custom-input {
+    position: relative;
+    display: inline-block;
+    width: 18rem;
+    height: 3rem;
+    margin-bottom: 2rem;
+    background-color: var(--color-background);
+    color: var(--color-white);
+}
+
+.custom-image-input {
+    background-color: var(--color-dark);
+    position: relative;
+    z-index: 2;
+    width: 0rem;
+    height: 3rem;
+    margin: 0;
+    opacity: 0;
+    margin-bottom: 0.5rem;
+    
+}
+
+.custom-image-label {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    width: 18rem;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 1;
+    height: 3rem;
+    padding: .375rem .75rem;
+    font-weight: 400;
+    line-height: 2.5;
+    font-weight: bold;
+    color: var(--color-white);
+    background-color: var(--color-dark);
+    border: 1px solid var(--color-dark-variant);
+    border-radius: .25rem;
+
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+
+    transition: all 0.3s ease;
+}
+
+.custom-image-label:hover{
+    background-color: var(--color-dark-variant);
+    transition: all 0.3s ease;
+}
+
+/* End of Custom Input Image fileField */

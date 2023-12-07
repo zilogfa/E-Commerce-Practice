@@ -1,0 +1,68 @@
+{% extends 'base.html' %}
+{% block content %}
+
+
+
+
+
+<div class="product-sec">
+    <a class="back-home" href="{{url_for('index')}}">
+        <span class="material-icons-round">arrow_back_ios_new</span>
+        <h3>Home</h3>
+    </a>
+<div class="products">
+
+
+    <div class="tab">
+        {% if product.pic %}
+        <img src="{{url_for('static', filename='images/product_pictures/' + product.pic )}}">
+        {% else %}
+        <img src="{{url_for('static', filename='images/shopping_bags.jpg' )}}" alt="">
+        {% endif %}
+
+        <div>
+            <h3>{{product.name}}</h3>
+            {{product.body | safe}}
+        </div>
+
+        <div>
+            <h3>{{product.name}}</h3>
+            <h3>${{ product.price }}</h3>
+
+        <form action="/create-checkout-session" method="POST">
+            <input type="hidden" name="product_name" value="{{product.name}}">
+            <input type="hidden" name="product_price" value="{{ product.price }}">
+            <button type="submit">
+                <span class="material-icons-round">shopping_cart</span>
+                <h3 class="h3-buy">Buy Now</h3>
+            </button>
+        </form>
+        </div>
+    </div>
+
+
+        <!-- {% if product.pic %}
+        <img src="{{url_for('static', filename='images/product_pictures/' + product.pic )}}">
+        {% else %}
+        <img src="{{url_for('static', filename='images/shopping_bags.jpg' )}}" alt="">
+        {% endif %}
+        
+        <h3>{{product.name}}</h3>
+        <p>${{ product.price }}</p>
+
+        <form action="/create-checkout-session" method="POST">
+            <input type="hidden" name="product_name" value="{{product.name}}">
+            <input type="hidden" name="product_price" value="{{ product.price }}">
+            <button type="submit">Buy Now</button>
+        </form> -->
+
+       
+
+
+
+</div>
+
+</div>
+
+
+{% endblock %}

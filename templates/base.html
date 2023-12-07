@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>E-Commerce Practice</title>
+    <!-- <link rel="icon" type="image/x-icon" href="{{url_for('static', filename='images/logo/favicon.ico')}}"> -->
+
+    
+    <!-- Google icon-->    
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
+
+    <!-- Custome CSS Styles-->
+    <link rel="stylesheet" href="../static/css/root.css">
+    <link rel="stylesheet" href="../static/css/styles.css">
+    {{ ckeditor.load() }}
+</head>
+<body>
+
+    <header>
+        <img src="../static/images/header_shop_3.jpg" alt="">    
+
+        <div class="title">
+            <h1>Virtual Market Hub</h1>
+            <h3>A Showcase of Design and Functionality - This is a demo site for portfolio purposes only and does not process real transactions.</h3>
+        </div>
+
+
+
+    </header>
+
+    <main>
+        {% block content %}
+        {% endblock %}
+    </main>
+
+
+    <!-- <section>
+        
+    </section> -->
+
+    <footer>
+        <div>
+            <h2>How to Test Payments</h2>
+        <p>To test the payment functionality, please use the following Stripe test card details:</p>
+        <ul>
+            <li><strong>Card Number:</strong> 4242 4242 4242 4242</li>
+            <li><strong>Expiration Date:</strong> Any future date (e.g., 12/34)</li>
+            <li><strong>CVC:</strong> Any 3 digits (e.g., 123)</li>
+            <li><strong>ZIP:</strong> Any 5 digits (e.g., 12345)</li>
+        </ul>
+        <p>Note: This is a demo site for portfolio purposes only. No real transactions will be processed.</p>
+ 
+            <!-- <a href="{{url_for('add_product')}}">+ Add Product</a> -->
+        </div>
+        <div>
+            <p>Developed by:</p>
+            <h3>www.alijafarbeglou.com</h3>
+        </div>
+    </footer>
+
+
+    <script src="https://js.stripe.com/v3/"></script>
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+    <script src="../static/js/index.js"></script>
+</body>
+</html>

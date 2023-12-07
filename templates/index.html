@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<div class="product-sec">
+    <h1>Our Exclusive Selection</h1>
+<div class="products">
+{% for product in products %}
+    <div class="product">
+        <div class="product-img">
+            {% if product.pic %}
+            <img src="{{url_for('static', filename='images/product_pictures/' + product.pic )}}">
+            {% else %}
+            <img src="{{url_for('static', filename='images/shopping_bags.jpg' )}}" alt="">
+            {% endif %}
+        </div>
+        
+        <div class="product-title">
+            <a href="{{url_for('view_product', product_id=product.id )}}"><h3>{{product.name}}</h3></a>
+            <p>${{ product.price }}</p>
+
+            <form action="/create-checkout-session" method="POST">
+                <input type="hidden" name="product_name" value="{{product.name}}">
+                <input type="hidden" name="product_price" value="{{ product.price }}">
+                <button type="submit">
+                    <span class="material-icons-round">shopping_cart</span>
+                    <h3 class="h3-buy">Buy Now</h3>
+                </button>
+            </form>
+        </div>
+        
+        
+    </div>
+
+
+{% endfor %}
+</div>
+</div>
+
+
+
+
+
+{% endblock %}
