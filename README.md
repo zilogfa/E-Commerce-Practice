@@ -9,7 +9,6 @@ This project simulates an e-commerce platform and includes features such as prod
 ## Features
 
 - Product Catalogue with sample products
-- Shopping Cart functionality
 - Checkout process
 - Stripe Payment Integration (test mode)
 - Responsive Design
