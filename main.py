@@ -8,7 +8,7 @@ import os
 import secrets
 from PIL import Image
 
-from flask_ckeditor import CKEditor, CKEditorField, upload_success, upload_fail
+from flask_ckeditor import CKEditor
 
 app = Flask(__name__)
 app.config['SECRET_KEY'] = 'secret_key'
@@ -57,6 +57,7 @@ def save_product_picture(file):
 
 
 
+# Home Page
 @app.route('/')
 def index():
     products = Product.query.all()
@@ -66,6 +67,7 @@ def index():
 def view_product(product_id):
     product = Product.query.filter_by(id=product_id).first()
     return render_template('view_product.html', product=product)
+
 
 
 @app.route('/add_product', methods=['GET', 'POST'])
@@ -87,7 +89,7 @@ def add_product():
     return render_template('add_product.html', form=form)
 
 
-#>>>>>>>>>>>>>>>>>>>>>>>>>> checkout
+#>>>>>>>>>>>>>>>>>>>>>>>>>> checkout ---------------
 @app.route('/create-checkout-session', methods=['POST'])
 def create_checkout_session():
     """
@@ -129,7 +131,7 @@ def success():
 @app.route('/cancel')
 def cancel():
     return 'Payment canceled.'    
-
+#----------------------------------------------------
 
 if __name__ == '__main__':
     with app.app_context():
