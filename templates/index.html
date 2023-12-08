@@ -18,14 +18,23 @@
             <a href="{{url_for('view_product', product_id=product.id )}}"><h3>{{product.name}}</h3></a>
             <p>${{ product.price }}</p>
 
-            <form action="/create-checkout-session" method="POST">
-                <input type="hidden" name="product_name" value="{{product.name}}">
-                <input type="hidden" name="product_price" value="{{ product.price }}">
-                <button type="submit">
-                    <span class="material-icons-round">shopping_cart</span>
-                    <h3 class="h3-buy">Buy Now</h3>
+            <div class="product-btn">
+                <form action="/create-checkout-session" method="POST">
+                    <input type="hidden" name="product_name" value="{{product.name}}">
+                    <input type="hidden" name="product_price" value="{{ product.price }}">
+                    <button class="buy-btn" type="submit">
+                        <span class="material-icons-round">shopping_cart</span>
+                        <h3 class="h3-buy">Shop Now</h3>
+                    </button>
+                    
+    
+                </form>
+                <button class="info-btn"  onclick="window.location.href='{{url_for('view_product', product_id=product.id )}}';">
+                    <span class="material-icons-round">inventory_2</span>
+                    <h3 class="h3-buy">About product</h3>
                 </button>
-            </form>
+            </div>
+            
         </div>
         
         

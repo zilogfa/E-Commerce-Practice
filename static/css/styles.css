@@ -58,29 +58,7 @@ header .title h3{
     font-family:'Times New Roman', Times, serif;
 }
 
-.product-sec button{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    gap: 1rem;
-    padding: 0.4rem 1rem;
-    background-color: var(--color-yellow-400);
-    border: 0;
-    border-radius: var(--border-radius-1);
-    transition: all 0.2s ease;
-    color: var(--color-white);
-}
 
-.product-sec button:hover{
-    color: var(--color-yellow-400);
-    background-color: var(--color-yellow-100);
-}
-
-.product-sec button:active{
-    color: var(--color-white);
-    background-color: var(--color-success);
-}
 
 
 .products{
@@ -88,6 +66,8 @@ header .title h3{
     flex-wrap: wrap;
     gap: 2rem;
     margin: 2rem 0;
+    justify-content: center;
+    align-items: center;
     
 }
 
@@ -131,14 +111,21 @@ header .title h3{
 
 
 .products .product h3{
-    font-size: 1.2rem;
+    font-size: 1rem;
 }
 
 .products .product p{
     font-size: 1.8rem;
-    color: var(--color-dark);
-    opacity: 0.5;
+    color: var(--color-black);
     font-family:'Times New Roman', Times, serif;
+    font-weight: 900;
+}
+
+.products .product .product-btn{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
 }
 
 
@@ -260,6 +247,75 @@ ul li{
 }
 
 
+
+
+
+
+
+
+
+
+
+
+/* >>>>>>>>>>>>> BTN */
+
+.buy-btn{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    padding: 0.4rem 1rem;
+    background-color: var(--color-yellow-400);
+    border: 0;
+    border-radius: var(--border-radius-1);
+    transition: all 0.2s ease;
+    color: var(--color-white);
+
+}
+
+.buy-btn h3{
+    font-weight: bold;
+}
+
+.buy-btn:hover{
+    color: var(--color-yellow-400);
+    background-color: var(--color-yellow-100);
+}
+
+.buy-btn:active{
+    color: var(--color-white);
+    background-color: var(--color-success);
+}
+
+
+
+
+
+.info-btn{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    padding: 0.4rem 1rem;
+    background-color: var(--color-dark);
+    border: 0;
+    border-radius: var(--border-radius-1);
+    transition: all 0.2s ease;
+    color: var(--color-white);
+}
+
+.info-btn:hover{
+    border: 1px solid var(--color-dark);
+    color: var(--color-dark);
+    background-color: var(--color-white);
+}
+
+.info-btn:active{
+    color: var(--color-white);
+    background-color: var(--color-success);
+}
 
 
 
