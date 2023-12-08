@@ -17,7 +17,7 @@
         {% if product.pic %}
         <img src="{{url_for('static', filename='images/product_pictures/' + product.pic )}}">
         {% else %}
-        <img src="{{url_for('static', filename='images/shopping_bags.jpg' )}}" alt="">
+        <img src="{{url_for('static', filename='images/shopping_bags.jpg' )}}">
         {% endif %}
 
         <div>
@@ -27,7 +27,17 @@
 
         <div>
             <h3>{{product.name}}</h3>
+            <p class="star">
+                <span class="material-icons-round">grade</span>
+                <span class="material-icons-round">grade</span>
+                <span class="material-icons-round">grade</span>
+                <span class="material-icons-round">grade</span>
+                <span class="material-icons-round">grade</span>
+            </p>
             <h3>${{ product.price }}</h3>
+
+            
+        <img class="pay-pic-img" src="{{url_for('static', filename='images/pay_logos2.png' )}}">
 
         <form action="/create-checkout-session" method="POST">
             <input type="hidden" name="product_name" value="{{product.name}}">

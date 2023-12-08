@@ -170,6 +170,21 @@ strong{
 
 
 
+.product-title .pay-pic-img{
+    width: 6rem;
+    background-color: var(--color-background);
+    padding: 0.5rem;
+    border-radius: var(--border-radius-1);
+}
+
+.tab .pay-pic-img{
+    width: 8rem;
+    background-color: var(--color-background);
+    padding: 0.5rem;
+    border-radius: var(--border-radius-1);
+}
+
+
 
 
 

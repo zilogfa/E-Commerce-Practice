@@ -15,9 +15,21 @@
         </div>
         
         <div class="product-title">
-            <a href="{{url_for('view_product', product_id=product.id )}}"><h3>{{product.name}}</h3></a>
+            <a href="{{url_for('view_product', product_id=product.id )}}">
+                <h3>{{product.name}}</h3>
+                
+            </a>
+            <p class="star">
+                <span class="material-icons-round">grade</span>
+                <span class="material-icons-round">grade</span>
+                <span class="material-icons-round">grade</span>
+                <span class="material-icons-round">grade</span>
+                <span class="material-icons-round">grade</span>
+            </p>
+            
             <p>${{ product.price }}</p>
 
+            <img class="pay-pic-img" src="{{url_for('static', filename='images/pay_logos2.png' )}}">
             <div class="product-btn">
                 <form action="/create-checkout-session" method="POST">
                     <input type="hidden" name="product_name" value="{{product.name}}">
